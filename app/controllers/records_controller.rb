@@ -1,2 +1,6 @@
+
 class RecordsController < ApplicationController
-end
+   def index
+     @records = Record.all
+   end
+ end
