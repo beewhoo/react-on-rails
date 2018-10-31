@@ -9,17 +9,17 @@
     name = e.target.name
     @setState "#{name}": e.target.value
 
-
-
-  handleSubmit: (e) ->
-    e.preventDefault()
-    $.post '', {record:@state}, (data) =>
-    @props.handleNewRecord data
-    @setState @getInitialState()
-    , 'JSON'
-
   valid: ->
       @state.title && @state.date && @state.amount
+
+  handleSubmit: (e) ->
+      e.preventDefault()
+      $.post '', { record: @state }, (data) =>
+        @props.handleNewRecord data
+        @setState @getInitialState()
+      , 'JSON'
+
+
 
   render: ->
     React.DOM.form
@@ -30,16 +30,16 @@
         React.DOM.input
           type:'text'
           className:'form-control'
-          placheholder:'Date'
+          placeholder:'yyyy-mm-dd'
           name:'date'
           value: @state.date
           onChange: @handleChange
       React.DOM.div
         className: 'form-group'
         React.DOM.input
-          type:'title'
+          type:'text'
           className:'form-control'
-          placheholder:'Title'
+          placeholder:'Title'
           name:'title'
           value: @state.title
           onChange: @handleChange
@@ -48,9 +48,9 @@
         React.DOM.input
           type:'number'
           className:'form-control'
-          placheholder:'Amount'
+          placeholder:'Amount'
           name:'amount'
-          value: @state.amnount
+          value: @state.amount
           onChange: @handleChange
       React.DOM.button
         type: 'submit'
