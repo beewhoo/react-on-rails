@@ -1,6 +1,6 @@
 
 class RecordsController < ApplicationController
-  protect_from_forgery 
+  protect_from_forgery
 
    def index
      @records = Record.all
@@ -15,6 +15,12 @@ class RecordsController < ApplicationController
      else
        render json: @record.errors, status: :unprocessable_entity
      end
+   end
+
+   def destroy
+     @record = Record.find(params[:id])
+     @record.destroy
+     head :no_content
    end
 
    private
