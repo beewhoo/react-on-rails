@@ -25,6 +25,7 @@
     React.DOM.form
       className: 'form-inline'
       onSubmit: @handleSubmit
+      
       React.DOM.div
         className: 'form-group'
         React.DOM.input
