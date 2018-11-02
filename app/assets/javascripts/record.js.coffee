@@ -17,6 +17,24 @@
       success: () =>
         @props.handleDeleteRecord @props.record
 
+  handleEdit: (e) ->
+    e.preventDefault()
+    data =
+      title: ReactDOM.findDOMNode(@refs.title).value
+      date: ReactDOM.findDOMNode(@refs.date).value
+      amount: ReactDOM.findDOMNode(@refs.amount).value
+
+    # jQuery doesn't have a $.put shortcut method either
+    $.ajax
+      method: 'PUT'
+      url: "/records/#{ @props.record.id }"
+      dataType: 'JSON'
+      data:
+        record: data
+      success: (data) =>
+        @setState edit: false
+        @props.handleEditRecord @props.record, data
+
 
   render: ->
     if @state.edit
