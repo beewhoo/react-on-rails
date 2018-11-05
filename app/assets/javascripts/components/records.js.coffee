@@ -35,7 +35,6 @@
 
 
 
-
     render: ->
       React.DOM.div
         className: 'records'

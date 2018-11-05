@@ -58,6 +58,7 @@
           onClick: @handleDelete
           'Delete'
 
+
   recordForm: ->
       React.DOM.tr null,
         React.DOM.td null,

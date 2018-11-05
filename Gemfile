@@ -12,7 +12,9 @@ gem 'puma', '~> 3.11'
 #jquery
 gem 'jquery-rails'
 #bootstrap
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.3.6'
+
+
 #react
 gem 'react-rails', '~> 1.0'
 # Use SCSS for stylesheets
