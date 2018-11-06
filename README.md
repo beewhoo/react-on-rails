@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is built with React and Rails.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app allows you to add, delete and edit expensese.
+This app tracks your expense and provides you with credit, debit & balance.
+User needs to fill all three inputs (date,time and amount) to enable 'create record button'. (Date has to be in YYYY-MM-DD format - for it to be stored in DB)
