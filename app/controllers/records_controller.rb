@@ -2,6 +2,10 @@
 class RecordsController < ApplicationController
   protect_from_forgery
 
+
+  def homepage
+  end
+
    def index
      @records = Record.all
    end
